@@ -13,11 +13,11 @@ const Registration = () => {
 
         axios.post()
         .then(res => {
-          console.log(res)
+          console.log('Register', res)
     
         })
         .catch(err => {
-          console.log(err.response);
+          console.log('Registration Error', err.response);
         })
   
         setNewUser('');
