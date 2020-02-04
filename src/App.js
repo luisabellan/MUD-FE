@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import Registration from './components/Registration';
-import Login from './components/Login';
+
+import AppRouter from './components/AppRouter';
 
 function App() {
   return (
     <div className="App">
-      {/* <Registration/> */}
-      <Login/>
+      <AppRouter/>
     </div>
   );
 }
