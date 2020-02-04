@@ -1,5 +1,9 @@
 import React from 'react'
 
+//components
+import PlayerStatBar from './player-status/PlayerStatBar'
+
+//styles
 import styled from 'styled-components'
 
 const DisplayContainer = styled.div`
@@ -14,7 +18,6 @@ const MainGameContainer = styled.div`
     width: 100%;
     height: 100%;
     margin: 10px auto;
-    background: #2d2d2d;
     border: 2px solid orange
 `
 const StatsGameInfoInput = styled.div`
@@ -41,11 +44,13 @@ export default function GameView() {
 
             <MainGameContainer>
                 <StatsGameInfoInput>
-                    
+                    <PlayerStatBar/>
                 </StatsGameInfoInput>
+
                 <GameControls>
-                    
+
                 </GameControls>
+
             </MainGameContainer>
         </div>
     )
