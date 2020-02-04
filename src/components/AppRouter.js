@@ -9,6 +9,7 @@ import { Nav } from './StyledWidgets';
 import Registration from './Registration';
 import Login from './Login';
 import GameView from './game-components/GameView.js';
+import PrivateRoute from './PrivateRoute';
 
 
 const AppRouter = () => {
@@ -26,7 +27,7 @@ const AppRouter = () => {
                 <Route exact path='/' />
                 <Route path='/register' component={Registration} />
                 <Route path='/login' component={Login} />
-                <Route path='/game-view' component={GameView} />
+                <PrivateRoute path='/game-view' component={GameView} />
             </Switch>
 
         </Router>
