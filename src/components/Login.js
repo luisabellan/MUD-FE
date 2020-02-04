@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+// Login
 const Login = () => {
     const [user, setNewUser] = useState({username: '', password: ''});
 
