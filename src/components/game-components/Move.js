@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Registration = () => {
+const Move = () => {
 
     return (
         <div>
@@ -9,4 +9,4 @@ const Registration = () => {
     )
 }
 
-export default Registration;
+export default Move;

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Registration = () => {
+const Navbar = () => {
 
     return (
         <div>
-
+            <h1>Testing</h1>
         </div>
     )
 }
 
-export default Registration;
+export default Navbar;
