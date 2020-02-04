@@ -1,17 +1,12 @@
 import React from 'react';
 
-const Login = () => {
+const Move = () => {
 
     return (
         <div>
-            
+
         </div>
     )
 }
 
-export default Login;
-
-
-
-
-
+export default Move;
