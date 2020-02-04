@@ -16,14 +16,13 @@ function App() {
   return (
 
     <Router>
-      {/* <Registration/> */}
-      <Login/>
+     
       <GameProvider>
-        <PlayerProvider>
-            <GameView/>
-    <div className="App">
-      <AppRouter/>
-    </div>
+        <PlayerProvider>   
+          <div className="App">
+            <AppRouter/>
+          
+          </div>
         </PlayerProvider>
       </GameProvider>
     </Router>
