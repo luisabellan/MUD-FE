@@ -44,7 +44,7 @@ export default function GameView() {
                     
                 </StatsGameInfoInput>
                 <GameControls>
-
+                    
                 </GameControls>
             </MainGameContainer>
         </div>
