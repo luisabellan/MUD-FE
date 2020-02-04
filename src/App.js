@@ -5,7 +5,9 @@ import './App.css';
 import GameProvider from './contexts/game-context/GameProvider'
 import PlayerProvider from './contexts/player-context/PlayerProvider'
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+//components
+
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
@@ -13,7 +15,6 @@ function App() {
       <GameProvider>
         <PlayerProvider>
 
-        
         </PlayerProvider>
       </GameProvider>
     </Router>

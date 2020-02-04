@@ -1,22 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
-//context 
-import GameContext from './GameContext'
+//context
+import { GameContext } from "./GameContext";
 
 export default function GameProvider({ children }) {
+  //state
+  const [roomInfo, setRoomInfo] = useState({
+    title: "testuser",
+    description: "The narrow passage bends here from west to north. The smell of gold permeates the air.",
+    players: [
+        "somebody",
+        "steveo",
+        "JTyzzerThaBoss",
+        "erik",
+        "hood",
+    ],
+  });
 
-    //state
-    const [ roomInfo, setRoomInfo ] = useState({}) 
-
-    return (
-        <>
-            <GameContext.Provider
-                value={{
-                    roomInfo,
-                }}
-            >
-                {children}
-            </GameContext.Provider>
-        </>
-    )
+  return (
+    <>
+      <GameContext.Provider
+        value={{
+          roomInfo
+        }}
+      >
+        {children}
+      </GameContext.Provider>
+    </>
+  );
 }
