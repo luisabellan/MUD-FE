@@ -2,21 +2,25 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+//Styled Components
+import { Nav } from './StyledWidgets';
+
 //Components
 import Registration from './Registration';
 import Login from './Login';
 import GameView from './game-components/GameView.js';
 
+
 const AppRouter = () => {
 
     return (
         <Router>
-            <div className='app-router'>
+            <Nav>
                 <Link to='/'>Home</Link>
                 <Link to='/register'>Register</Link>
                 <Link to='/login'>Login</Link>
                 <Link to='/game-view'>Game</Link>
-            </div>
+            </Nav>
 
             <Switch>
                 <Route exact path='/' />
