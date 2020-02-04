@@ -5,7 +5,7 @@ import React, {useState, useContext} from 'react'
 import styled from 'styled-components'
 
 //context
-import { PlayerContext } from '.././../contexts/player-context/PlayerContext'
+import { PlayerContext } from '../../../contexts/player-context/PlayerContext'
 
 const Tracker = styled.div`
     width: 200px;
