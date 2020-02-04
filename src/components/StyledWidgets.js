@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const DisplayContainer = styled.div`
     width: 100%;
-    margin-top: 75px;
     height: 350px;
     background: #2d2d2d;
     border: 2px solid red;
@@ -15,9 +14,9 @@ export const MainGameContainer = styled.div`
     border: 2px solid orange
 `
 export const StatsGameInfoInput = styled.div`
-    width: 70%;
+    width: 100%;
+    height: 20%;
     background: #2d2d2d;
-    border: 2px solid cyan
 `
 
 export const GameControls = styled.div`
@@ -28,7 +27,7 @@ export const GameControls = styled.div`
 `
 
 export const Tracker = styled.div`
-    width: 200px;
+    width: 250px;
     height: 20px;
     background: rgb(35,35,35);
     border-radius: 10px;
@@ -41,4 +40,25 @@ export const ProgressInTracker = styled.div`
     height: 100%;
     background: ${props => props.color};
     border-radius: 8px
+`
+
+export const GameInfoContainer = styled.div`
+    text-align: center;
+    width: 100%;
+    height: 80%;
+    background: black;
+
+`
+export const GameInput = styled.input`
+    width: 100%;
+    color: white;
+    height: 35px;
+    background: black;
+    border: 1px solid  gray;
+    font-size: 1.3rem;
+`
+export const GameInfo = styled.input`
+    width: 100%;
+    height: 405px;
+    background: black;
 `

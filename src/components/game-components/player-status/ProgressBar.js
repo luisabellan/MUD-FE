@@ -14,7 +14,7 @@ export default function ProgressBar( props ) {
 
     return (
         <Widgets.Tracker>
-            <Widgets.ProgressInTracker width={`${props.playerInfo}%` color={color}}>
+            <Widgets.ProgressInTracker width={`${props.playerInfo}%`} color={props.color}>
                 <p style={{color: 'white'}}>{`${props.playerInfo}/100`}</p>
             </Widgets.ProgressInTracker>
         </Widgets.Tracker>
