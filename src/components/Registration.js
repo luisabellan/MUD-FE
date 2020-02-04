@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+// Registration
 const Registration = () => {
     const [newUser, setNewUser] = useState({first_name: '', last_name: '', username: '', email: '', password: ''});
 
@@ -86,6 +87,7 @@ const Registration = () => {
                         onChange={handleChanges}
                     />
                 </div>
+                <button type='submit' onClick={register}>Register</button>
             </form>
         </div>
     )
