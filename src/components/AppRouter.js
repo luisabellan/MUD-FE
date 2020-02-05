@@ -14,6 +14,7 @@ import Registration from './Registration';
 import Login from './Login';
 import GameView from './game-components/GameView.js';
 import PrivateRoute from './PrivateRoute';
+import WelcomePage from './WelcomePage';
 
 
 const AppRouter = () => {
@@ -28,7 +29,7 @@ const AppRouter = () => {
             </Nav>
 
             <Switch>
-                <Route exact path='/' />
+                <Route exact path='/' component={WelcomePage}/>
                 <Route path='/register' component={Registration} />
                 <Route path='/login' component={Login} />
                 

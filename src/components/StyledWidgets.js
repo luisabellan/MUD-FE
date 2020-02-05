@@ -273,3 +273,10 @@ export const LoginHeader = styled.h1`
     text-align: center;
     
 `;
+
+//WelcomePage
+export const WelcomeImage = styled.div`
+    img {
+        margin-top: 80px;
+    }
+`;
