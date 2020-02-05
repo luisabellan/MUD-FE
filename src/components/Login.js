@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 //Styled Components
 import { LoginForm, LoginContext, LoginBtn, LoginHeader } from './StyledWidgets';
@@ -15,7 +15,7 @@ const Login = () => {
     const login = e => {
         e.prevent.default();
         
-        axios.post()
+        axiosWithAuth().post()
             .then(res => {
                 console.log('Login', res)
             })
