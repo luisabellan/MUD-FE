@@ -18,7 +18,7 @@ const Registration = props => {
         axios.post('https://build-week-mud.herokuapp.com/api/registration/', newUser)
         .then(res => {
           console.log('Register:', res.data);
-          localStorage.setItem('token', res.data);
+          localStorage.setItem('token', res.data.key);
           props.history.push('/login')
  
         })
