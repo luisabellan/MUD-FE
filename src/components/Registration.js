@@ -6,7 +6,7 @@ import { RegisterForm, Context, RegisterBtn } from './StyledWidgets';
 
 // Registration
 const Registration = () => {
-    const [newUser, setNewUser] = useState({username: '', email: '', password: '', confirm_pw: ''});
+    const [newUser, setNewUser] = useState({username: '', email: '', password1: '', password2: ''});
 
     const handleChanges = e => {
         setNewUser({...newUser, [e.target.name]: e.target.value});
@@ -14,10 +14,10 @@ const Registration = () => {
 
     const register = e => {
         e.preventDefault();
-
-        axios.post('https://build-week-mud.herokuapp.com/api/registration', newUser)
+        console.log(newUser);
+        axios.post('https://build-week-mud.herokuapp.com/api/registration/', newUser)
         .then(res => {
-          console.log('Register:', res)
+          console.log('Register:', res.data)
     
         })
         .catch(err => {
@@ -61,9 +61,9 @@ const Registration = () => {
                         <input
                             className='registration-form'
                             type='password'
-                            name='password'
+                            name='password1'
                             placeholder='create a password'
-                            value={newUser.password}
+                            value={newUser.password1}
                             onChange={handleChanges}
                         />
                     </div>
@@ -73,9 +73,9 @@ const Registration = () => {
                         <input
                             className='registration-form'
                             type='password'
-                            name='confirm_pw'
+                            name='password2'
                             placeholder='confirm password'
-                            value={newUser.confirm_pw}
+                            value={newUser.password2}
                             onChange={handleChanges}
                         />
                     </div>
