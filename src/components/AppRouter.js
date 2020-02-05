@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 //Styled Components
 import { Nav } from './StyledWidgets';
 
+//contexts
+import GameProvider from '../contexts/game-context/GameProvider'
+import PlayerProvider from '../contexts/player-context/PlayerProvider'
+
 //Components
 import Registration from './Registration';
 import Login from './Login';
@@ -27,7 +31,12 @@ const AppRouter = () => {
                 <Route exact path='/' />
                 <Route path='/register' component={Registration} />
                 <Route path='/login' component={Login} />
-                <PrivateRoute path='/game-view' component={GameView} />
+                
+                <GameProvider>
+                    <PlayerProvider>
+                        <Route path='/game-view' component={GameView} />
+                    </PlayerProvider>
+                </GameProvider>
             </Switch>
 
         </Router>

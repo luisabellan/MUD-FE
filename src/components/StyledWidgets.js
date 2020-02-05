@@ -61,7 +61,7 @@ export const GameInput = styled.input`
     border: 1px solid  gray;
     font-size: 1.3rem;
 `
-export const GameInfo = styled.input`
+export const RoomInfo = styled.div`
     width: 100%;
     height: 405px;
     background: black;
@@ -133,7 +133,7 @@ export const Nav = styled.div`
 `;
 
 //Registration
-export const RegisterForm = styled.div`
+export const RegisterForm = styled.form`
     background-image: linear-gradient(to top, rgba(157,0,0, 0), rgba(157,0,1));
     }
     margin: 0 auto;
@@ -154,7 +154,7 @@ export const RegisterForm = styled.div`
     }
 `;
 
-export const Context = styled.div`
+export const Context = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
