@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+//Styled Components
+import { RegisterForm, Context, RegisterBtn } from './StyledWidgets';
+
+// Registration
 const Registration = () => {
-    const [newUser, setNewUser] = useState({first_name: '', last_name: '', username: '', email: '', password: ''});
+    const [newUser, setNewUser] = useState({username: '', email: '', password: '', confirm_pw: ''});
 
     const handleChanges = e => {
         setNewUser({...newUser, [e.target.name]: e.target.value});
@@ -26,67 +30,58 @@ const Registration = () => {
 
     return (
         <div>
-            <form>
-                <div className='registeration-form'>
-                    <label>First Name:</label>
-                    <input
-                        className='registration-form'
-                        type='text'
-                        name='first_name'
-                        placeholder='First Name'
-                        value={newUser.first_name}
-                        onChange= {handleChanges}
-                    />
-                </div>
+            <RegisterForm>
+                <Context>
+                    <div className='registration-form'>
+                        <label>Username:</label>
+                        <input
+                            className='registration-form'
+                            type='text'
+                            name='username'
+                            placeholder='Username'
+                            value={newUser.username}
+                            onChange={handleChanges}
+                        />
+                    </div>
 
-                <div className='registeration-form'>
-                    <label>Last Name:</label>
-                    <input
-                        className='registeration-form'
-                        type='text'
-                        name='last_name'
-                        placeholder='Last Name'
-                        value={newUser.last_name}
-                        onChange={handleChanges}
-                    />
-                </div>
+                    <div className='registration-form'>
+                        <label>Email:</label>
+                        <input
+                            className='registration-form'
+                            type='text'
+                            name='email'
+                            placeholder='Email'
+                            value={newUser.email}
+                            onChange={handleChanges}
+                        />
+                    </div>
 
-                <div className='registeration-form'>
-                    <label>Username:</label>
-                    <input
-                        className='registeration-form'
-                        type='text'
-                        name='username'
-                        placeholder='Username'
-                        value={newUser.username}
-                        onChange={handleChanges}
-                    />
-                </div>
+                    <div className='registration-form'>
+                        <label>Password:</label>
+                        <input
+                            className='registration-form'
+                            type='password'
+                            name='password'
+                            placeholder='create a password'
+                            value={newUser.password}
+                            onChange={handleChanges}
+                        />
+                    </div>
 
-                <div className='registeration-form'>
-                    <label>Email:</label>
-                    <input
-                        className='registeration-form'
-                        type='text'
-                        name='email'
-                        placeholder='Email'
-                        value={newUser.email}
-                        onChange={handleChanges}
-                    />
-                </div>
-
-                <div className='registeration-form'>
-                    <label>Password:</label>
-                    <input
-                        className='registeration-form'
-                        type='password'
-                        name='password'
-                        placeholder='create a password'
-                        value={newUser.password}
-                        onChange={handleChanges}
-                    />
-                </div>
-            </form>
+                    <div className='registration-form'>
+                        <label>Confirm Password:</label>
+                        <input
+                            className='registration-form'
+                            type='password'
+                            name='confirm_pw'
+                            placeholder='confirm password'
+                            value={newUser.confirm_pw}
+                            onChange={handleChanges}
+                        />
+                    </div>
+                    <RegisterBtn type='submit' onClick={register}>Register</RegisterBtn>
+                </Context>
+            </RegisterForm>
         </div>
     )
 }
