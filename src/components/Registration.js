@@ -13,15 +13,15 @@ const Registration = () => {
     };
 
     const register = e => {
-        e.prevent.default();
+        e.preventDefault();
 
-        axios.post()
+        axios.post('https://build-week-mud.herokuapp.com/api/registration', newUser)
         .then(res => {
-          console.log('Register', res)
+          console.log('Register:', res)
     
         })
         .catch(err => {
-          console.log('Registration Error', err.response);
+          console.log('Registration Error:', err.response);
         })
   
         setNewUser('');
