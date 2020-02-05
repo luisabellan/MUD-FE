@@ -18,7 +18,7 @@ const Login = props => {
         axiosWithAuth().post('/api/login/', user)
             .then(res => {
                 console.log('Login', res)
-                localStorage.setItem('token', res.data);
+                localStorage.setItem('token', res.data.key);
                 props.history.push('/game-view');
             })
             .catch(err => {
