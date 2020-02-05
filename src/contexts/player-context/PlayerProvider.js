@@ -6,7 +6,7 @@ import { PlayerContext } from './PlayerContext'
 export default function PlayerProvider({ children }) {
 
     //state
-    const [ playerInfo, setPlayerInfo ] = useState({health: 100}) 
+    const [ playerInfo, setPlayerInfo ] = useState({name: 'Frodo',health: 100, magic: 100, }) 
 
     
     return (

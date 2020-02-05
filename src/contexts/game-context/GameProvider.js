@@ -14,6 +14,7 @@ export default function GameProvider({ children }) {
         "JTyzzerThaBoss",
         "erik",
         "hood",
+        "hood",
     ],
   });
 
