@@ -5,19 +5,21 @@ import { axiosWithAuth } from '../utils/axiosWithAuth';
 import { LoginForm, LoginContext, LoginBtn, LoginHeader } from './StyledWidgets';
 
 // Login
-const Login = () => {
-    const [user, setNewUser] = useState({username: '', password: ''});
+const Login = props => {
+    const [user, setNewUser] = useState({username: '', email: '', password: ''});
 
     const handleChanges = e => {
         setNewUser({...user, [e.target.name]: e.target.value});
     };
 
     const login = e => {
-        e.prevent.default();
+        e.preventDefault();
         
-        axiosWithAuth().post()
+        axiosWithAuth().post('/api/login/', user)
             .then(res => {
                 console.log('Login', res)
+                localStorage.setItem('token', res.data);
+                props.history.push('/game-view');
             })
             .catch(err => {
                 console.log('Login Error', err.response)
@@ -39,6 +41,18 @@ const Login = () => {
                             name='username'
                             placeholder='username'
                             value={user.username}
+                            onChange={handleChanges}
+                    />
+                </div>
+
+                <div className='login-form'>
+                    <label>Email:</label>
+                    <input
+                            className='login-form'
+                            type='text'
+                            name='email'
+                            placeholder='email'
+                            value={user.email}
                             onChange={handleChanges}
                     />
                 </div>
