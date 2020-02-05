@@ -3,6 +3,8 @@ import React from 'react'
 //components
 import PlayerStatBar from './player-status/PlayerStatBar'
 import GameInfo from './GameInfo'
+import GameActions from './GameActions'
+import Movement from './Movement'
 
 //styles
 import * as Widgets from '../StyledWidgets'
@@ -25,7 +27,8 @@ export default function GameView() {
                 </Widgets.StatsGameInfoInput>
 
                 <Widgets.GameControls>
-                    
+                    <GameActions/>
+                    <Movement/>
                 </Widgets.GameControls>
 
             </Widgets.MainGameContainer>

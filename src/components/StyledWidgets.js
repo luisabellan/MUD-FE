@@ -20,6 +20,9 @@ export const StatsGameInfoInput = styled.div`
 `
 
 export const GameControls = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 30%;
     height: 500px;
     background: #2d2d2d;
@@ -61,4 +64,47 @@ export const GameInfo = styled.input`
     width: 100%;
     height: 405px;
     background: black;
+    overflow-y: auto;
+`
+
+export const GameActionsContainer = styled.div`
+    display: flex;
+    height: 50%;
+    width: 48%;
+    border: 1px solid white;
+
+
+`
+
+export const ActionButton = styled.button`
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+`
+
+export const PlayersContainer = styled.div`
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 48%;
+    border: 1px solid green;
+`
+
+export const MovementContainer = styled.div`
+    width: 100%;
+`
+
+export const Player = styled.div`
+    height: 200px;
+    width: 100%;
 `
