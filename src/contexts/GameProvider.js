@@ -20,11 +20,11 @@ export default function GameProvider({ children }) {
     axiosWithAuth()
     .get('/api/adv/init/')
       .then(res => {
-        console.log("from useEffect",res)
+        console.log("res from useEffect",res)
         setRoomInfo({...res.data})
       })
       .catch(err => {
-        console.log("from useEffect",err)
+        console.log("err from useEffect",err)
       })
   //   axios
   //   .get('https://build-week-mud.herokuapp.com/api/adv/init/', {headers: {
@@ -34,13 +34,13 @@ export default function GameProvider({ children }) {
   },[])
   const movePlayer = (direction) => {
     axiosWithAuth()
-    .post('/api/adv/movePlayer/', {"direction": direction})
+    .post('/api/adv/move/', {"direction": direction})
       .then(res => {
-        console.log("from useEffect",res)
+        console.log("from movement",res)
         setRoomInfo({...res.data})
       })
       .catch(err => {
-        console.log("from useEffect",err)
+        console.log("from movement",err)
       })
   }
 

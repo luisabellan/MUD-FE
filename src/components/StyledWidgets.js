@@ -106,8 +106,13 @@ export const MovementContainer = styled.div`
 `
 
 export const Player = styled.div`
-    height: 200px;
+    height: 50px;
     width: 100%;
+    border: 1px solid red
+    h2 {
+        color: white;
+        font-size: 1.3rem
+    }
 `
 //AppRouter
 export const Nav = styled.div`

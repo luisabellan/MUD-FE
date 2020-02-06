@@ -7,10 +7,12 @@ export const axiosWithAuth = () => {
     console.log(token)
 
     return axios.create({
-        baseURL: 'https://lambda-mud-test.herokuapp.com/',
+        baseURL: 'https://build-week-mud.herokuapp.com/',
         headers: {
             "Content-Type": 'application/json',
             // "Access-Control-Allow-Origin": "*",
+            // "Access-Control-Allow-Headers": "*",
+
             "Authorization": `Token ${token}`,
         },
     });

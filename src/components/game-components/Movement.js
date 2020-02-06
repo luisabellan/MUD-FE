@@ -7,7 +7,6 @@ import { GameContext } from "../../contexts/GameContext";
 
 const Movement = () => {
   const { movePlayer } = useContext(GameContext);
-  console.log(movePlayer);
   return (
     <Widget.MovementContainer>
       <button

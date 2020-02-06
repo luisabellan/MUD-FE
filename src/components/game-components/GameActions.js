@@ -17,7 +17,7 @@ export default function GameActions() {
             <Widget.PlayersContainer>
                 {roomInfo.players.map(player => {
 
-                    return <Widget.Player>{player}</Widget.Player>
+                    return <Widget.Player><h2>{player}</h2></Widget.Player>
                 })}
             </Widget.PlayersContainer>
         </>
