@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 //Styled Components
-import { RegisterForm, Context, RegisterBtn } from './StyledWidgets';
+import { RegisterForm, Context, RegisterBtn } from '../StyledWidgets';
 
 // Registration
 const Registration = props => {

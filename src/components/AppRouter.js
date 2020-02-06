@@ -9,20 +9,20 @@ import { Nav } from "./StyledWidgets";
 import GameProvider from "../contexts/GameProvider";
 
 //Components
-import Registration from "./Registration";
-import Login from "./Login";
+import Registration from "./Auth/Registration";
+import Login from "./Auth/Login";
 import GameView from "./game-components/GameView.js";
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./Auth/PrivateRoute";
 import WelcomePage from "./WelcomePage";
 
 const AppRouter = () => {
   return (
     <Router>
       <Nav>
-        <Link to="/">Home</Link>
+        <Link to="/" style={{fontFamily: "'Metal Mania', cursive", color: '#9a0606', fontSize: '2.5rem'}}>DUNGEON OF THE HAUNTED FOREST</Link>
+        <Link to="/game-view">Game</Link>
         <Link to="/register">Register</Link>
         <Link to="/login">Login</Link>
-        <Link to="/game-view">Game</Link>
         <Link to='/' onClick={() => {
             localStorage.removeItem("token");}}>LogOut</Link>
       </Nav>

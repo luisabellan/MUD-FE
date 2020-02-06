@@ -1,29 +1,30 @@
 import styled from 'styled-components';
 
-
-
+// https://jsfiddle.net/MadLittleMods/r32rL/
+const boxShadow = `
+-moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+-webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+`
 
 export const DisplayContainer = styled.div`
     width: 100%;
     height: 350px;
     background: #2d2d2d;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
 `
 export const MainGameContainer = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
     margin: 10px auto;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
 `
 export const StatsGameInfoInput = styled.div`
     width: 100%;
     height: 20%;
-    background: #2d2d2d;
+    ${boxShadow};
+    background: #1a1a1a;
 `
 
 export const GameControls = styled.div`
@@ -34,9 +35,7 @@ export const GameControls = styled.div`
     width: 30%;
     height: 500px;
     background: #2c2c2c;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
 `
 
 export const Tracker = styled.div`
@@ -66,25 +65,47 @@ export const GameInput = styled.input`
     width: 100%;
     color: white;
     height: 35px;
-    background:  #2d2d2d;;
-    border: 1px solid  gray;
+    background:  black;
     font-size: 1.3rem;
 `
+
+export const GameOutput = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow-y: auto;
+    width: 100%;
+    color: white;
+    height: 288px;
+    background:  black;
+    font-size: 1.3rem;
+    border-left: 2px solid gray;
+`
+
 export const RoomInfo = styled.div`
     width: 100%;
-    height: 405px;
-    background: black;
-    overflow-y: auto;
+    height: 120px;
+    background: #2d2d2d;
+    ${boxShadow};
 `
+export const RoomTitle = styled.h1`
+    font-size: 3rem;
+    font-family: 'Metal Mania', cursive;
+    color: #9a0606;
+`
+
+export const RoomDesc = styled.p`
+    font-size: 1.4rem;
+    color: white;
+`
+
 
 export const GameActionsContainer = styled.div`
     display: flex;
     height: 50%;
     width: 48%;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     background: #1a1a1a;
+    ${boxShadow};
 
 `
 
@@ -93,9 +114,7 @@ export const ActionButton = styled.button`
     width: 100%;
     border: none;
     background-color: #2c2c2c;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
     color: red;
     padding: 5px 10px;
     text-align: center;
@@ -103,25 +122,41 @@ export const ActionButton = styled.button`
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    outline: none;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(4px);
+      }
+
 `
 
 export const PlayersContainer = styled.div`
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     height: 50%;
     width: 48%;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    overflow-y: auto;
+    ${boxShadow};
     background: #1a1a1a;
+    `
+    
+export const Player = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 98%;
+    background: #2c2c2c;
+    ${boxShadow};
+    h2 {
+        color: #650d88;
+        font-size: 1.3rem
+    }
 `
-
-export const MovementContainer = styled.div`
+    export const MovementContainer = styled.div`
     width: 100%;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
     background: #1a1a1a;
     display: grid;
     grid-template-columns:65px 100px 100px 100px;
@@ -148,40 +183,27 @@ export const MovementButton = styled.button`
     margin-bottom: 20px;
     cursor: pointer;
     background-color: #2c2c2c;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
+    outline: none;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(4px);
+      }
 `
 
 
-export const Player = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 98%;
-    background: #2c2c2c;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    h2 {
-        color: #cc33ff;
-        font-size: 1.3rem
-    }
-`
 //AppRouter
 export const Nav = styled.div`
     background-color: #0A235C;
-    height: 80px;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    height: 75px;
+    ${boxShadow};
     background: #1C1C1C;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     a {
-        margin-top: 25px;
         text-decoration: none;
         color: #F0F0F0;
         font-size: 18px;
