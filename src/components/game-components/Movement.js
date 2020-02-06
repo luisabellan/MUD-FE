@@ -1,17 +1,44 @@
-import React from 'react';
+import React, { useContext } from "react";
 
-import * as Widget from '../StyledWidgets'
+import * as Widget from "../StyledWidgets";
+
+// context
+import { GameContext } from "../../contexts/GameContext";
 
 const Movement = () => {
-
-    return (
-        <Widget.MovementContainer>
-            <button>N</button>
-            <button>S</button>
-            <button>E</button>
-            <button>W</button>
-        </Widget.MovementContainer>
-    )
-}
+  const { movePlayer } = useContext(GameContext);
+  return (
+    <Widget.MovementContainer>
+      <button
+        onClick={() => {
+          movePlayer("n");
+        }}
+      >
+        N
+      </button>
+      <button
+        onClick={() => {
+          movePlayer("s");
+        }}
+      >
+        S
+      </button>
+      <button
+        onClick={() => {
+          movePlayer("e");
+        }}
+      >
+        E
+      </button>
+      <button
+        onClick={() => {
+          movePlayer("w");
+        }}
+      >
+        W
+      </button>
+    </Widget.MovementContainer>
+  );
+};
 
 export default Movement;

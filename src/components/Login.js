@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { axiosWithAuth } from '../utils/axiosWithAuth';
+import axios from 'axios';
 
 //Styled Components
 import { LoginForm, LoginContext, LoginBtn, LoginHeader } from './StyledWidgets';
@@ -15,10 +15,11 @@ const Login = props => {
     const login = e => {
         e.preventDefault();
         
-        axiosWithAuth().post('/api/login/', user)
+        axios.post('https://build-week-mud.herokuapp.com/api/login/', user)
             .then(res => {
-                console.log('Login', res)
+                console.log('Login', res.data.key)
                 localStorage.setItem('token', res.data.key);
+                console.log(localStorage.getItem('token'))
                 props.history.push('/game-view');
             })
             .catch(err => {
