@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 
 
@@ -9,7 +9,13 @@ import * as Widget from '../StyledWidgets'
 import { GameContext } from '../../contexts/GameContext'
 
 export default function GameInfo() {
-    const { roomInfo, gameOutput } = useContext(GameContext)
+
+    const [chatMsg, setChatMsg] = useState({msg: ''});
+    const { roomInfo, gameOutput, chat } = useContext(GameContext)
+
+    const handleChanges = e => {
+        setChatMsg({...chatMsg, [e.target.name]: e.target.value});
+    };
     return (
         <Widget.GameInfoContainer>
             <Widget.RoomInfo>
@@ -18,10 +24,16 @@ export default function GameInfo() {
             </Widget.RoomInfo>
             <Widget.GameOutput>
                 {gameOutput.map(msg => {
-                    return <p><span style={{color: 'purple'}}> => </span>{msg}</p>
+                    return <p key={Date.now}><span style={{color: 'purple'}}> => </span>{msg}</p>
                 })}
             </Widget.GameOutput>
-            <Widget.GameInput/>
+            <Widget.GameInput
+                type='text'
+                name='msg'
+                placeholder='Chat Here'
+                value={chatMsg.msg}
+                onChange={handleChanges}
+            />
         </Widget.GameInfoContainer>
     )
 }

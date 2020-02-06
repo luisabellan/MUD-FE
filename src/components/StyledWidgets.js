@@ -1,31 +1,29 @@
 import styled from 'styled-components';
 
-
-
+// https://jsfiddle.net/MadLittleMods/r32rL/
+const boxShadow = `
+-moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+-webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+`
 
 export const DisplayContainer = styled.div`
     width: 100%;
     height: 350px;
     background: #2d2d2d;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
 `
 export const MainGameContainer = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
     margin: 10px auto;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
 `
 export const StatsGameInfoInput = styled.div`
     width: 100%;
     height: 20%;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
     background: #1a1a1a;
 `
 
@@ -37,9 +35,7 @@ export const GameControls = styled.div`
     width: 30%;
     height: 500px;
     background: #2c2c2c;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
 `
 
 export const Tracker = styled.div`
@@ -90,9 +86,7 @@ export const RoomInfo = styled.div`
     width: 100%;
     height: 120px;
     background: #2d2d2d;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
 `
 export const RoomTitle = styled.h1`
     font-size: 3rem;
@@ -110,10 +104,8 @@ export const GameActionsContainer = styled.div`
     display: flex;
     height: 50%;
     width: 48%;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     background: #1a1a1a;
+    ${boxShadow};
 
 `
 
@@ -122,9 +114,7 @@ export const ActionButton = styled.button`
     width: 100%;
     border: none;
     background-color: #2c2c2c;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
     color: red;
     padding: 5px 10px;
     text-align: center;
@@ -147,9 +137,7 @@ export const PlayersContainer = styled.div`
     height: 50%;
     width: 48%;
     overflow-y: auto;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
     background: #1a1a1a;
     `
     
@@ -160,9 +148,7 @@ export const Player = styled.div`
     height: 50px;
     width: 98%;
     background: #2c2c2c;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
     h2 {
         color: #650d88;
         font-size: 1.3rem
@@ -170,9 +156,7 @@ export const Player = styled.div`
 `
     export const MovementContainer = styled.div`
     width: 100%;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
     background: #1a1a1a;
     display: grid;
     grid-template-columns:65px 100px 100px 100px;
@@ -199,9 +183,7 @@ export const MovementButton = styled.button`
     margin-bottom: 20px;
     cursor: pointer;
     background-color: #2c2c2c;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    ${boxShadow};
     outline: none;
 
     &:active {
@@ -214,16 +196,14 @@ export const MovementButton = styled.button`
 //AppRouter
 export const Nav = styled.div`
     background-color: #0A235C;
-    height: 80px;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    height: 75px;
+    ${boxShadow};
     background: #1C1C1C;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     a {
-        margin-top: 25px;
         text-decoration: none;
         color: #F0F0F0;
         font-size: 18px;
