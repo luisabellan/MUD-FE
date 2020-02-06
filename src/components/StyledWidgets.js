@@ -173,7 +173,9 @@ export const Player = styled.div`
 export const Nav = styled.div`
     background-color: #0A235C;
     height: 80px;
-    box-shadow: 5px 5px 8px #BFBFBF;
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     background: #1C1C1C;
     display: flex;
     flex-direction: row;
