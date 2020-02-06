@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 //Styled Components
-import { LoginForm, LoginContext, LoginBtn, LoginHeader } from './StyledWidgets';
+import { LoginForm, LoginContext, LoginBtn, LoginHeader } from '../StyledWidgets';
 
 // Login
 const Login = props => {
