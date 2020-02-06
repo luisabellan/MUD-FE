@@ -119,6 +119,10 @@ export const PlayersContainer = styled.div`
 
 export const MovementContainer = styled.div`
     width: 100%;
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    background: #1a1a1a;
     display: grid;
     grid-template-columns:65px 100px 100px 100px;
     grid-template-rows: 80px 80px 80px; 
@@ -143,7 +147,7 @@ export const MovementButton = styled.button`
     margin-top: 5px;
     margin-bottom: 20px;
     cursor: pointer;
-    background-color: #1a1a1a;
+    background-color: #2c2c2c;
     -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
