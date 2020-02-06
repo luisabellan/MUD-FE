@@ -9,10 +9,10 @@ import { Nav } from "./StyledWidgets";
 import GameProvider from "../contexts/GameProvider";
 
 //Components
-import Registration from "./Registration";
-import Login from "./Login";
+import Registration from "./Auth/Registration";
+import Login from "./Auth/Login";
 import GameView from "./game-components/GameView.js";
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./Auth/PrivateRoute";
 import WelcomePage from "./WelcomePage";
 
 const AppRouter = () => {

@@ -23,7 +23,10 @@ export const MainGameContainer = styled.div`
 export const StatsGameInfoInput = styled.div`
     width: 100%;
     height: 20%;
-    background: #2d2d2d;
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    background: #1a1a1a;
 `
 
 export const GameControls = styled.div`
@@ -66,16 +69,42 @@ export const GameInput = styled.input`
     width: 100%;
     color: white;
     height: 35px;
-    background:  #2d2d2d;;
-    border: 1px solid  gray;
+    background:  black;
     font-size: 1.3rem;
 `
+
+export const GameOutput = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow-y: auto;
+    width: 100%;
+    color: white;
+    height: 288px;
+    background:  black;
+    font-size: 1.3rem;
+    border-left: 2px solid gray;
+`
+
 export const RoomInfo = styled.div`
     width: 100%;
-    height: 405px;
-    background: black;
-    overflow-y: auto;
+    height: 120px;
+    background: #2d2d2d;
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
 `
+export const RoomTitle = styled.h1`
+    font-size: 3rem;
+    font-family: 'Metal Mania', cursive;
+    color: #9a0606;
+`
+
+export const RoomDesc = styled.p`
+    font-size: 1.4rem;
+    color: white;
+`
+
 
 export const GameActionsContainer = styled.div`
     display: flex;
@@ -103,21 +132,43 @@ export const ActionButton = styled.button`
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    outline: none;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(4px);
+      }
+
 `
 
 export const PlayersContainer = styled.div`
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     height: 50%;
     width: 48%;
+    overflow-y: auto;
     -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     background: #1a1a1a;
+    `
+    
+export const Player = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 98%;
+    background: #2c2c2c;
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    h2 {
+        color: #650d88;
+        font-size: 1.3rem
+    }
 `
-
-export const MovementContainer = styled.div`
+    export const MovementContainer = styled.div`
     width: 100%;
     -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
@@ -151,24 +202,15 @@ export const MovementButton = styled.button`
     -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
     box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+    outline: none;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(4px);
+      }
 `
 
 
-export const Player = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 98%;
-    background: #2c2c2c;
-    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
-    h2 {
-        color: #cc33ff;
-        font-size: 1.3rem
-    }
-`
 //AppRouter
 export const Nav = styled.div`
     background-color: #0A235C;
