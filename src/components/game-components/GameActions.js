@@ -8,11 +8,11 @@ import { GameContext } from '../../contexts/GameContext'
 
 export default function GameActions() {
 
-    const { roomInfo } = useContext(GameContext)
+    const { roomInfo, attack } = useContext(GameContext)
     return (
         <>
             <Widget.GameActionsContainer>
-                <Widget.ActionButton>ATTACK</Widget.ActionButton> 
+                <Widget.ActionButton onClick={attack}>ATTACK</Widget.ActionButton> 
             </Widget.GameActionsContainer>
             <Widget.PlayersContainer>
                 {roomInfo.players.map(player => {

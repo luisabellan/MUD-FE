@@ -9,16 +9,19 @@ import * as Widget from '../StyledWidgets'
 import { GameContext } from '../../contexts/GameContext'
 
 export default function GameInfo() {
-    const { roomInfo } = useContext(GameContext)
-    console.log(roomInfo.description)
+    const { roomInfo, gameOutput } = useContext(GameContext)
     return (
         <Widget.GameInfoContainer>
             <Widget.RoomInfo>
-                <h1 style={{color: 'purple'}}>{roomInfo.title}</h1>
-                <p style={{color: 'purple'}}>{roomInfo.description}</p>
+                <Widget.RoomTitle>{roomInfo.title}</Widget.RoomTitle>
+                <Widget.RoomDesc>{roomInfo.description}</Widget.RoomDesc>
             </Widget.RoomInfo>
-
-            {/* <Widget.GameInput/> */}
+            <Widget.GameOutput>
+                {gameOutput.map(msg => {
+                    return <p><span style={{color: 'purple'}}> => </span>{msg}</p>
+                })}
+            </Widget.GameOutput>
+            <Widget.GameInput/>
         </Widget.GameInfoContainer>
     )
 }

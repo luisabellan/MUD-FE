@@ -13,13 +13,12 @@ const PlayerStatusContainer = styled.div`
     align-items: center;
     height: 50px;
     width: 100%;
-    border: 2px solid #909090
 
 `
 
 const PlayerInfo = styled.div`
     display: flex;
-    color: orange;
+    color: white;
     width: 30%;
 `
 
@@ -31,8 +30,8 @@ export default function PlayerStatBar() {
     return (
         <PlayerStatusContainer>
             <PlayerInfo>Name: {roomInfo.name}</PlayerInfo>
-            <PlayerInfo>HP<ProgressBar playerInfo={100} color='green'/></PlayerInfo>
-            <PlayerInfo>MP<ProgressBar playerInfo={100} color='blue'/></PlayerInfo>
+            <PlayerInfo><span style={{marginRight: '10px'}}>HP:</span><ProgressBar playerInfo={100} color='#9a0606'/></PlayerInfo>
+            <PlayerInfo><span style={{marginRight: '10px'}}>MP:</span><ProgressBar playerInfo={100} color='#650d88'/></PlayerInfo>
         </PlayerStatusContainer>
     )
 }
