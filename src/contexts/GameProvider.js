@@ -5,8 +5,6 @@ import { GameContext } from "./GameContext";
 
 import { axiosWithAuth } from "../utils/axiosWithAuth"
 
-import axios from 'axios'
-
 export default function GameProvider({ children }) {
   //state
   const [roomInfo, setRoomInfo] = useState({

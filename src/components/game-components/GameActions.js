@@ -12,7 +12,7 @@ export default function GameActions() {
     return (
         <>
             <Widget.GameActionsContainer>
-                <Widget.ActionButton>LOOK</Widget.ActionButton> 
+                <Widget.ActionButton>ATTACK</Widget.ActionButton> 
             </Widget.GameActionsContainer>
             <Widget.PlayersContainer>
                 {roomInfo.players.map(player => {
