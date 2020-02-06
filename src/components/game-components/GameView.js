@@ -14,7 +14,7 @@ import * as Widgets from '../StyledWidgets'
 export default function GameView() {
 
     return (
-        <div style={{margin: '20px', background: 'black'}}>
+        <div style={{margin: '20px', background: ''}}>
             <Widgets.DisplayContainer> 
 
             </Widgets.DisplayContainer>

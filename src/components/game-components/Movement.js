@@ -9,34 +9,38 @@ const Movement = () => {
   const { movePlayer } = useContext(GameContext);
   return (
     <Widget.MovementContainer>
-      <button
+      <Widget.MovementButton
         onClick={() => {
           movePlayer("n");
         }}
+        style={{gridArea: "north"}}
       >
         N
-      </button>
-      <button
+      </Widget.MovementButton>
+      <Widget.MovementButton
         onClick={() => {
           movePlayer("s");
         }}
+        style={{gridArea: "south"}}
       >
         S
-      </button>
-      <button
+      </Widget.MovementButton>
+      <Widget.MovementButton
         onClick={() => {
           movePlayer("e");
         }}
+        style={{gridArea: "east"}}
       >
         E
-      </button>
-      <button
+      </Widget.MovementButton>
+      <Widget.MovementButton
         onClick={() => {
           movePlayer("w");
         }}
+        style={{gridArea: "west"}}
       >
         W
-      </button>
+      </Widget.MovementButton>
     </Widget.MovementContainer>
   );
 };
