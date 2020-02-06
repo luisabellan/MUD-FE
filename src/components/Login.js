@@ -20,7 +20,7 @@ const Login = props => {
                 console.log('Login', res.data.key)
                 localStorage.setItem('token', res.data.key);
                 console.log(localStorage.getItem('token'))
-                // props.history.push('/game-view');
+                props.history.push('/game-view');
             })
             .catch(err => {
                 console.log('Login Error', err.response)

@@ -5,7 +5,7 @@ import axios from 'axios';
 import { RegisterForm, Context, RegisterBtn } from './StyledWidgets';
 
 // Registration
-const Registration = () => {
+const Registration = props => {
     const [newUser, setNewUser] = useState({username: '', email: '', password1: '', password2: ''});
 
     const handleChanges = e => {
@@ -17,8 +17,10 @@ const Registration = () => {
         console.log(newUser);
         axios.post('https://build-week-mud.herokuapp.com/api/registration/', newUser)
         .then(res => {
-          console.log('Register:', res.data)
-    
+          console.log('Register:', res.data);
+          localStorage.setItem('token', res.data.key);
+          props.history.push('/login')
+ 
         })
         .catch(err => {
           console.log('Registration Error:', err.response);

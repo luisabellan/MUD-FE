@@ -23,6 +23,8 @@ const AppRouter = () => {
         <Link to="/register">Register</Link>
         <Link to="/login">Login</Link>
         <Link to="/game-view">Game</Link>
+        <Link to='/' onClick={() => {
+            localStorage.removeItem("token");}}>LogOut</Link>
       </Nav>
 
       <Switch>
@@ -39,3 +41,4 @@ const AppRouter = () => {
 };
 
 export default AppRouter;
+
