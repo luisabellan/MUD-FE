@@ -1,7 +1,7 @@
 //link to setup
 //https://medium.com/swlh/creating-a-progress-bar-in-react-181501bc22f1
 
-import React, {useState, useContext} from 'react'
+import React from 'react'
 import * as Widgets from '../../StyledWidgets'
 
 

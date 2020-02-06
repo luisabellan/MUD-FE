@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import styled from 'styled-components'
 
 //context
-import { PlayerContext } from '../../../contexts/player-context/PlayerContext'
+import { GameContext } from '../../../contexts/GameContext'
 
 //components
 import ProgressBar from './ProgressBar'
@@ -25,13 +25,14 @@ const PlayerInfo = styled.div`
 
 
 export default function PlayerStatBar() {
-    const { playerInfo } = useContext(PlayerContext)
+
+    const { roomInfo } = useContext(GameContext)
 
     return (
         <PlayerStatusContainer>
-            <PlayerInfo>Name: {playerInfo.name}</PlayerInfo>
-            <PlayerInfo>HP<ProgressBar playerInfo={playerInfo.health} color='green'/></PlayerInfo>
-            <PlayerInfo>MP<ProgressBar playerInfo={playerInfo.magic} color='blue'/></PlayerInfo>
+            <PlayerInfo>Name: {roomInfo.name}</PlayerInfo>
+            <PlayerInfo>HP<ProgressBar playerInfo={100} color='green'/></PlayerInfo>
+            <PlayerInfo>MP<ProgressBar playerInfo={100} color='blue'/></PlayerInfo>
         </PlayerStatusContainer>
     )
 }

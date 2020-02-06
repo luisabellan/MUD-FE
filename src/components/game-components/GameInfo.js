@@ -6,7 +6,7 @@ import React, { useContext } from 'react'
 import * as Widget from '../StyledWidgets'
 
 //context 
-import { GameContext } from '../../contexts/game-context/GameContext'
+import { GameContext } from '../../contexts/GameContext'
 
 export default function GameInfo() {
     const { roomInfo } = useContext(GameContext)
