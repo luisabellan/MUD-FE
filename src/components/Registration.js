@@ -41,7 +41,7 @@ const Registration = props => {
                             type='text'
                             name='username'
                             placeholder='Username'
-                            value={newUser.username}
+                            value={newUser.username} required
                             onChange={handleChanges}
                         />
                     </div>
@@ -53,7 +53,7 @@ const Registration = props => {
                             type='text'
                             name='email'
                             placeholder='Email'
-                            value={newUser.email}
+                            value={newUser.email} required
                             onChange={handleChanges}
                         />
                     </div>
@@ -65,7 +65,7 @@ const Registration = props => {
                             type='password'
                             name='password1'
                             placeholder='create a password'
-                            value={newUser.password1}
+                            value={newUser.password1} required
                             onChange={handleChanges}
                         />
                     </div>
@@ -77,7 +77,7 @@ const Registration = props => {
                             type='password'
                             name='password2'
                             placeholder='confirm password'
-                            value={newUser.password2}
+                            value={newUser.password2} required
                             onChange={handleChanges}
                         />
                     </div>
