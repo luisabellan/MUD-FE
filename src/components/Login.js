@@ -41,7 +41,7 @@ const Login = props => {
                             type='text'
                             name='username'
                             placeholder='username'
-                            value={user.username}
+                            value={user.username} required
                             onChange={handleChanges}
                     />
                 </div>
@@ -53,7 +53,7 @@ const Login = props => {
                             type='text'
                             name='email'
                             placeholder='email'
-                            value={user.email}
+                            value={user.email} required
                             onChange={handleChanges}
                     />
                 </div>
@@ -65,7 +65,7 @@ const Login = props => {
                             type='password'
                             name='password'
                             placeholder='password'
-                            value={user.password}
+                            value={user.password} required
                             onChange={handleChanges}
                     />
                 </div>
