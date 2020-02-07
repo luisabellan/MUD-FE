@@ -1,5 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useContext } from "react"
+import styled from "styled-components"
+import { GameContext } from "../../contexts/GameContext"
+import knight_idle from "../../img/sprites/knight/Idle (1).png"
 
 const Tile = styled.div`
   position: absolute;
@@ -8,7 +10,11 @@ const Tile = styled.div`
   align-items: center;
   background: dodgerblue;
   border: 3px solid #000;
-`;
+`
+
+const Sprite = styled.img`
+  width: 100%;
+`
 
 export default function Room({
   id,
@@ -20,8 +26,8 @@ export default function Room({
   e_to_id,
   w_to_id
 }) {
-  // const { id, title, description } = props.room;
-  // console.log(id);
+  const { roomInfo } = useContext(GameContext)
+  console.log("FROM ROOM:", roomInfo)
 
   return (
     <>
@@ -37,10 +43,10 @@ export default function Room({
           borderLeft: w_to_id && "none"
         }}
       >
-        <p>{id}</p>
+        {roomInfo.room_id === id && <Sprite alt="sprite" src={knight_idle} />}
       </Tile>
     </>
-  );
+  )
 }
 
 /*
