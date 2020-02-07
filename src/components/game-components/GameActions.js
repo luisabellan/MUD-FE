@@ -13,7 +13,8 @@ import etheraelAttack from '../../sounds/etherael-attack.wav'
 export default function GameActions() {
 
     const sound = new Howl({
-        src: [etheraelAttack]
+        src: [etheraelAttack],
+        volume: 0.2,
     });
 
 
@@ -32,7 +33,7 @@ export default function GameActions() {
             <Widget.PlayersContainer>
                 {roomInfo.players.map(player => {
 
-                    return <Widget.Player><h2>{player}</h2></Widget.Player>
+                    return <Widget.Player key={player}><h2>{player}</h2></Widget.Player>
                 })}
             </Widget.PlayersContainer>
         </>

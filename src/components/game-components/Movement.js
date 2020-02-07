@@ -9,7 +9,8 @@ import { GameContext } from "../../contexts/GameContext";
 
 const Movement = () => {
   const sound = new Howl({
-    src: [footStep]
+    src: [footStep],
+    volume: 0.3,
   });
 
   const { movePlayer } = useContext(GameContext);

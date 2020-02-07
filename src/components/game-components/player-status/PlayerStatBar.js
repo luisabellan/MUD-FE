@@ -37,7 +37,7 @@ export default function PlayerStatBar() {
 
     return (
         <PlayerStatusContainer>
-            <PlayerName>Name:  <span>{roomInfo.name}</span></PlayerName>
+            <PlayerName>Name:<span style={{marginLeft: '10px'}}>{roomInfo.name}</span></PlayerName>
             <PlayerInfo><span style={{marginRight: '10px'}}>HP:</span><ProgressBar playerInfo={roomInfo.hp} color='#9a0606'/></PlayerInfo>
             <PlayerInfo><span style={{marginRight: '10px'}}>MP:</span><ProgressBar playerInfo={100} color='#650d88'/></PlayerInfo>
         </PlayerStatusContainer>
