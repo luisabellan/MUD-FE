@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import * as Widget from "../StyledWidgets";
-import {Howl, Howler} from 'howler';
+import { Howl } from 'howler';
 import footStep from '../../sounds/footstep.wav'
 
 // context
