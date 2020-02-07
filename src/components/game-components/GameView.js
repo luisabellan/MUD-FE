@@ -14,18 +14,18 @@ import * as Widgets from "../StyledWidgets";
 export default function GameView() {
   return (
     <div style={{ margin: "20px", background: "" }}>
-      <Widgets.DisplayContainer>
-        <TileMap/>
-        <Enemy/>
-      </Widgets.DisplayContainer>
+      {/* <Widgets.DisplayContainer>
+      </Widgets.DisplayContainer> */}
 
       <Widgets.MainGameContainer>
         <Widgets.StatsGameInfoInput>
           <PlayerStatBar />
           <GameInfo />
         </Widgets.StatsGameInfoInput>
+          <TileMap/>
 
         <Widgets.GameControls>
+          <Enemy/>
           <GameActions />
           <Movement />
         </Widgets.GameControls>

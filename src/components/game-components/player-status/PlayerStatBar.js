@@ -9,9 +9,10 @@ import ProgressBar from './ProgressBar'
 
 const PlayerStatusContainer = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 150px;
     width: 100%;
 
 `
