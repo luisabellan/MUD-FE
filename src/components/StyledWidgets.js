@@ -68,7 +68,7 @@ export const GameInfoContainer = styled.div`
 
 `
 export const GameInput = styled.input`
-    width: 99%;
+    width: 98%;
     color: white;
     height: 35px;
     background:  black;
@@ -82,7 +82,7 @@ export const GameOutput = styled.div`
     overflow-y: auto;
     width: 99%;
     color: white;
-    height: 380px;
+    height: 430px;
     background:  black;
     font-size: 1.3rem;
     border-left: 2px solid gray;
@@ -203,7 +203,7 @@ export const MovementButton = styled.button`
 `
 export const EnemyContainer = styled.div`
     width: 100%;
-    height: 300px;
+    height: 360px;
     background: #1C1C1C;
     ${boxShadow}
 
@@ -223,8 +223,8 @@ export const EnemyP = styled.p`
 
 export const EnemyImg = styled.img`
     object-fit: contain;
-    width: 240px;
-    height: 150px;
+    width: 300px;
+    height: 210px;
       
 `
 
@@ -306,6 +306,7 @@ export const Context = styled.form`
 
 export const RegisterBtn = styled.div`
     font-size: 12px;
+    font-weight: bold;
     border-radius: 5px;
     padding: 8px 8px;
     width: 40%;
@@ -387,9 +388,10 @@ export const LoginBtn = styled.div`
 `;
 
 export const LoginHeader = styled.h1`
-    font-size: 18px;
+    font-size: 25px;
     color: #FFFFFF;
     text-align: center;
+    margin-bottom: 20px;
     
 `;
 

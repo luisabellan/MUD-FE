@@ -43,7 +43,7 @@ export default function Enemy() {
           <EnemyTitle>{roomInfo.enemy.name}</EnemyTitle>
           <EnemyP>{roomInfo.enemy.description}</EnemyP>
           <EnemyP>health: {roomInfo.enemy.hp}</EnemyP>
-          <EnemyImg src={ghost}></EnemyImg>
+          <EnemyImg src={spider}></EnemyImg>
         </>
       ) : (
         <span style={{color: 'white'}}>No Enemy in this room</span>

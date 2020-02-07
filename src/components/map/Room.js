@@ -6,7 +6,7 @@ const Tile = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: dodgerblue;
+  background: #9a0606;
   border: 3px solid #000;
 `;
 
@@ -34,7 +34,9 @@ export default function Room({
           borderTop: n_to_id && "none",
           borderBottom: s_to_id && "none",
           borderRight: e_to_id && "none",
-          borderLeft: w_to_id && "none"
+          borderLeft: w_to_id && "none",
+          marginLeft: '-70px',
+          marginTop: '50px'
         }}
       >
         <p>{id}</p>
