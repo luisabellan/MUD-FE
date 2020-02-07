@@ -8,9 +8,10 @@ import { GameContext } from '../../../contexts/GameContext'
 import ProgressBar from './ProgressBar'
 
 const PlayerStatusContainer = styled.div`
+    margin: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 150px;
     width: 100%;
@@ -20,7 +21,7 @@ const PlayerStatusContainer = styled.div`
 const PlayerInfo = styled.div`
     display: flex;
     color: white;
-    width: 30%;
+    width: 50%;
 `
 const PlayerName = styled.div`
     display: flex;
