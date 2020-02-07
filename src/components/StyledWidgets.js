@@ -27,7 +27,7 @@ export const MainGameContainer = styled.div`
     ${boxShadow};
 `
 export const StatsGameInfoInput = styled.div`
-    width: 500px;
+    width: 30%;
     height: 20%;
     ${boxShadow};
     background: #1a1a1a;
@@ -82,7 +82,7 @@ export const GameOutput = styled.div`
     overflow-y: auto;
     width: 99%;
     color: white;
-    height: 430px;
+    height: 380px;
     background:  black;
     font-size: 1.3rem;
     border-left: 2px solid gray;
@@ -92,7 +92,7 @@ export const GameOutput = styled.div`
 
 export const RoomInfo = styled.div`
     width: 100%;
-    height: 200px;
+    height: 250px;
     background: #2d2d2d;
     ${boxShadow};
 `
