@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Room from "./Room"
 import { axiosWithAuth } from "../../utils/axiosWithAuth"
+import creepyForest from '../../img/creepyForest.jpg'
 
 const Map = styled.div`
   position: relative;
   width: 730px;
-  height: 840px;
+  height: 750px;
   background: #2d2d2d;
+  background-image: url(${creepyForest});
+  background-repeat: no-repeat;
   margin: 0 auto;
 `
 
