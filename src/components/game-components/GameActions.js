@@ -12,7 +12,6 @@ import etheraelAttack from '../../sounds/etherael-attack.wav'
 
 export default function GameActions() {
 
-    
     const sound = new Howl({
         src: [etheraelAttack]
     });
