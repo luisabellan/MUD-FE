@@ -6,7 +6,7 @@ import * as Widget from '../StyledWidgets'
 //context
 import { GameContext } from '../../contexts/GameContext'
 
-import { Howl, Howler } from 'howler';
+import { Howl } from 'howler';
 
 import etheraelAttack from '../../sounds/etherael-attack.wav'
 
