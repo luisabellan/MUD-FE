@@ -46,7 +46,7 @@ export const GameControls = styled.div`
 
 export const Tracker = styled.div`
     width: 250px;
-    height: 20px;
+    height: 30px;
     background: rgb(35,35,35);
     border-radius: 10px;
     box-shadow:inset 0 - 5px #000
@@ -80,17 +80,19 @@ export const GameOutput = styled.div`
     flex-direction: column;
     align-items: start;
     overflow-y: auto;
-    width: 100%;
+    width: 99%;
     color: white;
-    height: 528px;
+    height: 430px;
     background:  black;
     font-size: 1.3rem;
     border-left: 2px solid gray;
+    border-right: 2px solid gray;
+
 `
 
 export const RoomInfo = styled.div`
     width: 100%;
-    height: 120px;
+    height: 200px;
     background: #2d2d2d;
     ${boxShadow};
 `
@@ -108,7 +110,7 @@ export const RoomDesc = styled.p`
 
 export const GameActionsContainer = styled.div`
     display: flex;
-    height: 50%;
+    height: 40%;
     width: 48%;
     background: #1a1a1a;
     ${boxShadow};
@@ -140,7 +142,7 @@ export const ActionButton = styled.button`
 export const PlayersContainer = styled.div`
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 40%;
     width: 48%;
     overflow-y: auto;
     ${boxShadow};
@@ -156,7 +158,7 @@ export const Player = styled.div`
     background: #2c2c2c;
     ${boxShadow};
     h2 {
-        color: #650d88;
+        color: white;
         font-size: 1.3rem
     }
 `
@@ -165,7 +167,7 @@ export const Player = styled.div`
     ${boxShadow};
     background: #1a1a1a;
     display: grid;
-    grid-template-columns:65px 100px 100px 100px;
+    grid-template-columns:115px 100px 100px 100px;
     grid-template-rows: 80px 80px 80px; 
     grid-template-areas: 
     ". . north ."
@@ -176,6 +178,7 @@ export const Player = styled.div`
 `
 
 export const MovementButton = styled.button`
+
     font-size: 12px;
     border-radius: 50%;
     padding: 8px 8px;
@@ -189,8 +192,9 @@ export const MovementButton = styled.button`
     margin-bottom: 20px;
     cursor: pointer;
     background-color: #2c2c2c;
-    ${boxShadow};
     outline: none;
+    ${boxShadow};
+    ${font};
 
     &:active {
         box-shadow: none;
@@ -199,7 +203,7 @@ export const MovementButton = styled.button`
 `
 export const EnemyContainer = styled.div`
     width: 100%;
-    height: 300px;
+    height: 360px;
     background: #1C1C1C;
     ${boxShadow}
 
@@ -219,8 +223,8 @@ export const EnemyP = styled.p`
 
 export const EnemyImg = styled.img`
     object-fit: contain;
-    width: 240px;
-    height: 150px;
+    width: 300px;
+    height: 210px;
       
 `
 
