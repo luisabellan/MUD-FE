@@ -271,6 +271,7 @@ export const Context = styled.form`
 
 export const RegisterBtn = styled.div`
     font-size: 12px;
+    font-weight: bold;
     border-radius: 5px;
     padding: 8px 8px;
     width: 40%;
@@ -352,9 +353,10 @@ export const LoginBtn = styled.div`
 `;
 
 export const LoginHeader = styled.h1`
-    font-size: 18px;
+    font-size: 25px;
     color: #FFFFFF;
     text-align: center;
+    margin-bottom: 20px;
     
 `;
 
