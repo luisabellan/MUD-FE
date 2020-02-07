@@ -68,7 +68,7 @@ export const GameInfoContainer = styled.div`
 
 `
 export const GameInput = styled.input`
-    width: 100%;
+    width: 98%;
     color: white;
     height: 35px;
     background:  black;
@@ -82,7 +82,7 @@ export const GameOutput = styled.div`
     overflow-y: auto;
     width: 100%;
     color: white;
-    height: 288px;
+    height: 528px;
     background:  black;
     font-size: 1.3rem;
     border-left: 2px solid gray;

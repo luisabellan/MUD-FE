@@ -5,9 +5,9 @@ import  { axiosWithAuth } from "../../utils/axiosWithAuth";
 
 const Map = styled.div`
   position: relative;
-  width: 750px;
-  height: 750px;
-  background: lightgreen;
+  width: 730px;
+  height: 840px;
+  background: #2d2d2d;
   margin: 0 auto;
 `;
 
