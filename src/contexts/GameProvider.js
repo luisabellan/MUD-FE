@@ -12,7 +12,13 @@ export default function GameProvider({ children }) {
 
     description: "",
     players: [],
-    hp: 0
+    hp: 0,
+    enemy: {
+      name: '',
+      hp: 0,
+      description: ''
+    }
+
   });
 
   const [gameOutput, setGameOutput] = useState([]);
@@ -37,9 +43,14 @@ export default function GameProvider({ children }) {
     axiosWithAuth()
       .post("/api/adv/move/", { direction: direction })
       .then(res => {
-        console.log("from movement", res);
-        setRoomInfo({ ...res.data, hp: roomInfo.hp });
-        setGameOutput([])
+        if(res.data.error_msg){
+          setGameOutput([...gameOutput, res.data.error_msg])
+        }
+        else{
+          console.log("from movement", res);
+          setRoomInfo({ ...res.data, hp: roomInfo.hp });
+          setGameOutput([])
+        }
       })
       .catch(err => {
         console.log("from movement", err);
@@ -53,7 +64,7 @@ export default function GameProvider({ children }) {
         console.log("from attack then", res);
         setGameOutput([...gameOutput, res.data.message])
         if(res.data.player){
-          setRoomInfo({...roomInfo, hp: res.data.player.hp})
+          setRoomInfo({...roomInfo, hp: res.data.player.hp, enemy:{...roomInfo.roomInfo.enemy, hp: res.data.enemy.hp}})
         }
       })
       .catch(err => {
