@@ -27,7 +27,7 @@ export const MainGameContainer = styled.div`
     ${boxShadow};
 `
 export const StatsGameInfoInput = styled.div`
-    width: 100%;
+    width: 500px;
     height: 20%;
     ${boxShadow};
     background: #1a1a1a;
@@ -38,8 +38,8 @@ export const GameControls = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 30%;
-    height: 500px;
+    width: 28%;
+    height: 600px;
     background: #2c2c2c;
     ${boxShadow};
 `
@@ -198,8 +198,8 @@ export const MovementButton = styled.button`
       }
 `
 export const EnemyContainer = styled.div`
-    width: 500px;
-    height: 100%;
+    width: 100%;
+    height: 300px;
     background: #1C1C1C;
     ${boxShadow}
 
@@ -220,7 +220,7 @@ export const EnemyP = styled.p`
 export const EnemyImg = styled.img`
     object-fit: contain;
     width: 240px;
-    height: 165px;
+    height: 150px;
       
 `
 
