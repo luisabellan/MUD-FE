@@ -63,8 +63,8 @@ export default function GameProvider({ children }) {
       .then(res => {
         console.log("from attack then", res);
         setGameOutput([...gameOutput, res.data.message])
-        if(res.data.player){
-          setRoomInfo({...roomInfo, hp: res.data.player.hp, enemy:{...roomInfo.roomInfo.enemy, hp: res.data.enemy.hp}})
+        if(res.data.enemy){
+          setRoomInfo({...roomInfo, hp: res.data.player.hp, enemy:{...roomInfo.enemy, hp: res.data.enemy.hp}})
         }
       })
       .catch(err => {

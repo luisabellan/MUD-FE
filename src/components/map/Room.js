@@ -27,7 +27,6 @@ export default function Room({
   w_to_id
 }) {
   const { roomInfo } = useContext(GameContext)
-  console.log("FROM ROOM:", roomInfo)
 
   return (
     <>
