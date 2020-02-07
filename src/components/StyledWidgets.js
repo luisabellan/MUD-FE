@@ -82,7 +82,7 @@ export const GameOutput = styled.div`
     overflow-y: auto;
     width: 99%;
     color: white;
-    height: 380px;
+    height: 350px;
     background:  black;
     font-size: 1.3rem;
     border-left: 2px solid gray;
@@ -92,7 +92,7 @@ export const GameOutput = styled.div`
 
 export const RoomInfo = styled.div`
     width: 100%;
-    height: 250px;
+    height: 280px;
     background: #2d2d2d;
     ${boxShadow};
 `
@@ -167,7 +167,7 @@ export const Player = styled.div`
     ${boxShadow};
     background: #1a1a1a;
     display: grid;
-    grid-template-columns:115px 100px 100px 100px;
+    grid-template-columns:23% 100px 100px 100px 20%;
     grid-template-rows: 80px 80px 80px; 
     grid-template-areas: 
     ". . north ."
@@ -223,8 +223,8 @@ export const EnemyP = styled.p`
 
 export const EnemyImg = styled.img`
     object-fit: contain;
-    width: 300px;
-    height: 210px;
+    width: 250px;
+    height: 160px;
       
 `
 
