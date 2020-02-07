@@ -10,6 +10,7 @@ import ghost from "../../img/ghost.jpg";
 import spider from "../../img/Phase_Spider.jpg";
 import shrieker from "../../img/shrieker.jpg";
 import bats from "../../img/bats.jpg";
+import firBeetle from "../../img/fireBettle.jpeg"
 
 export default function Enemy() {
   const { roomInfo } = useContext(GameContext);
@@ -30,6 +31,9 @@ export default function Enemy() {
         break;
       case "Shrieker":
         img = shrieker;
+        break;
+      case "Giant Fire Beetle":
+        img = firBeetle;
         break;
       default:
         img = null;

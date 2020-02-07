@@ -2,14 +2,14 @@ import React, { useContext } from "react";
 
 import * as Widget from "../StyledWidgets";
 import {Howl, Howler} from 'howler';
-import walking from '../../sounds/walking.mp3'
+import footStep from '../../sounds/footstep.wav'
 
 // context
 import { GameContext } from "../../contexts/GameContext";
 
 const Movement = () => {
   const sound = new Howl({
-    src: [walking]
+    src: [footStep]
   });
 
   const { movePlayer } = useContext(GameContext);
