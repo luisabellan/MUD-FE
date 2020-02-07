@@ -7,7 +7,13 @@ const boxShadow = `
 box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
 `
 
+const font = "font-family: 'Metal Mania', cursive"
+
 export const DisplayContainer = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
     width: 100%;
     height: 350px;
     background: #2d2d2d;
@@ -90,7 +96,7 @@ export const RoomInfo = styled.div`
 `
 export const RoomTitle = styled.h1`
     font-size: 3rem;
-    font-family: 'Metal Mania', cursive;
+    ${font};
     color: #9a0606;
 `
 
@@ -191,7 +197,32 @@ export const MovementButton = styled.button`
         transform: translateY(4px);
       }
 `
+export const EnemyContainer = styled.div`
+    width: 500px;
+    height: 100%;
+    background: #1C1C1C;
+    ${boxShadow}
 
+    
+`
+export const EnemyTitle = styled.h2`
+      ${font};
+      color: purple;
+      font-size: 3rem;
+      
+    
+`
+export const EnemyP = styled.p`
+      color: white;
+      
+`
+
+export const EnemyImg = styled.img`
+    object-fit: contain;
+    width: 240px;
+    height: 165px;
+      
+`
 
 //AppRouter
 export const Nav = styled.div`
@@ -271,6 +302,7 @@ export const Context = styled.form`
 
 export const RegisterBtn = styled.div`
     font-size: 12px;
+    font-weight: bold;
     border-radius: 5px;
     padding: 8px 8px;
     width: 40%;
@@ -352,9 +384,10 @@ export const LoginBtn = styled.div`
 `;
 
 export const LoginHeader = styled.h1`
-    font-size: 18px;
+    font-size: 25px;
     color: #FFFFFF;
     text-align: center;
+    margin-bottom: 20px;
     
 `;
 
